@@ -2,7 +2,7 @@ task = []  # this code equals an empty list so I can start my project
 
 
 
-# Function to display the menu options - simple and beginner-friendly
+# Function to display the menu options 
 def display_menu():
 
     print("\n=== To-Do List Menu ===")  # this code adds a simple header to make it pop out more than the others 
@@ -34,7 +34,7 @@ def add_task():
 def view_task():
     
     if len(task) == 0:  # Checking if the list is empty
-        print("No tasks available. Add some to get started!")
+        print("No tasks available so add some to get started!")
     
     else:
         print("\n=== Your To-Do List ===")  # trying to keep the 'to do list' the same and pop out more then the rest 
@@ -51,7 +51,7 @@ def delete_task():
         task_number = int(input("Enter the task number to delete: "))  
 
         if 1 <= task_number <= len(task):  # this code checks if the code is valid
-            removed_task = task.pop(task_number - 1)  #this removes the task by its number
+            removed_task = task.pop(task_number - 1)  #this removes the task by number
             print(f"Task '{removed_task}' deleted successfully.") 
 
         else:
@@ -73,7 +73,7 @@ def main():
     while True:  # infinate loop that keeps the app running 
 
         display_menu()  # shows the menu each time 
-        choice = input("What would you like to do? ")  
+        choice = input("What do you want to do? ")  
 
         if choice == "1":  
             add_task()
